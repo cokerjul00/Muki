@@ -30,13 +30,15 @@ public class EnemyMove : MonoBehaviour
     }
     public void OnTriggerEnter(Collider collision)
     {
-        inRadius = true;
+        if(collision.gameObject.name == "Bean")
+            inRadius = true;
             
     }
 
     public void OnTriggerExit(Collider collision)
     {
-        inRadius = false;
+        if(collision.gameObject.name == "Bean")
+            inRadius = false;
 
     }
 
