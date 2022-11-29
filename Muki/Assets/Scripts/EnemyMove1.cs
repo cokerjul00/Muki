@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyMove : MonoBehaviour
+public class EnemyMove1 : MonoBehaviour
 {
     NavMeshAgent Enemy;
     GameObject player;
@@ -23,10 +23,10 @@ public class EnemyMove : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         Pathnode1 = transform.position;
-        Pathnode1.z -= strafingDistance;
+        Pathnode1.x -= strafingDistance;
 
         Pathnode2 = transform.position;
-        Pathnode2.z += strafingDistance;
+        Pathnode2.x += strafingDistance;
     }
 
     // Update is called once per frame
@@ -42,7 +42,7 @@ public class EnemyMove : MonoBehaviour
             if(!strafingPos1 && !strafingPos2)
                 Enemy.SetDestination(Pathnode1);
 
-            if (transform.position.x == Pathnode1.x && transform.position.z == Pathnode1.z)
+            if (transform.position.z == Pathnode1.z && transform.position.x == Pathnode1.x)
             {
                 Enemy.SetDestination(Pathnode2);
 
@@ -50,7 +50,7 @@ public class EnemyMove : MonoBehaviour
                 strafingPos2 = true;
             }
 
-            else if (transform.position.x == Pathnode2.x && transform.position.z == Pathnode2.z)
+            else if (transform.position.z == Pathnode2.z && transform.position.x == Pathnode2.x)
             {
                 Enemy.SetDestination(Pathnode1);
 
