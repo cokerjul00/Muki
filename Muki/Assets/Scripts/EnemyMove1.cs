@@ -63,14 +63,15 @@ public class EnemyMove1 : MonoBehaviour
     {
         if(collision.gameObject.name == "Bean")
             inRadius = true;
-            
+            strafingPos1 = false;
+            strafingPos2 = false;
+
     }
 
     public void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.name == "Bean")
             inRadius = false;
-
     }
 
 }

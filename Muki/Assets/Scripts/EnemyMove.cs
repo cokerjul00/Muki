@@ -11,7 +11,7 @@ public class EnemyMove : MonoBehaviour
     private bool strafingPos2 = false;
     private bool inRadius = false;
 
-    public float strafingDistance = 5;
+    public float strafingDistance = 10;
 
     public Vector3 Pathnode1;
     public Vector3 Pathnode2;
@@ -63,7 +63,8 @@ public class EnemyMove : MonoBehaviour
     {
         if(collision.gameObject.name == "Bean")
             inRadius = true;
-            
+            strafingPos1 = false;
+            strafingPos2 = false;
     }
 
     public void OnTriggerExit(Collider collision)
