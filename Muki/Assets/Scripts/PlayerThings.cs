@@ -10,16 +10,18 @@ public class PlayerThings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
-    private void OnCollisionEnter(Collider collision)
+    public void OnCollisionEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.name == "EnemyX")
         {
             health--;
         }
     }
+
+
 
 
 
