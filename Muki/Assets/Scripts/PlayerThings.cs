@@ -7,17 +7,19 @@ public class PlayerThings : MonoBehaviour
 
     public int health = 3;
 
+    Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
-    
+        rb = GetComponent<Rigidbody>();
     }
 
     public void OnCollisionEnter(Collider collision)
     {
         if (collision.gameObject.name == "EnemyX")
         {
-            health--;
+            int v = health--;
         }
     }
 
