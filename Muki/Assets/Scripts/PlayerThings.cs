@@ -5,21 +5,23 @@ using UnityEngine;
 public class PlayerThings : MonoBehaviour
 {
 
-    public int health = 3;
+    public int health = 5;
+    public int Maxhealth = 5;
 
     Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
+        health = Maxhealth;
         rb = GetComponent<Rigidbody>();
     }
 
-    public void OnCollisionEnter(Collider collision)
+    public void OnCollisionEnter(Collider Collision)
     {
-        if (collision.gameObject.name == "EnemyX")
+        if (Collision.gameObject.tag == "Enemy")
         {
-            int v = health--;
+            health =- 1;
         }
     }
 
@@ -30,6 +32,5 @@ public class PlayerThings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
