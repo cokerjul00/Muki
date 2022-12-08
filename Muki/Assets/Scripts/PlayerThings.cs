@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerThings : MonoBehaviour
 {
-
-    public int health = 5;
+    public GameOverScript GameOver;
+    public int health = 3;
     public int Maxhealth = 5;
 
     Rigidbody rb;
@@ -17,11 +18,11 @@ public class PlayerThings : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    public void OnCollisionEnter(Collider Collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (Collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
-            health =- 1;
+            health--;
         }
     }
 
@@ -32,5 +33,11 @@ public class PlayerThings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
