@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -36,10 +34,10 @@ public class EnemyMove1 : MonoBehaviour
         {
             Enemy.SetDestination(player.transform.position);
         }
-        
-        else if(!inRadius)
+
+        else if (!inRadius)
         {
-            if(!strafingPos1 && !strafingPos2)
+            if (!strafingPos1 && !strafingPos2)
                 Enemy.SetDestination(Pathnode1);
 
             if (transform.position.z == Pathnode1.z && transform.position.x == Pathnode1.x)
@@ -61,10 +59,10 @@ public class EnemyMove1 : MonoBehaviour
     }
     public void OnTriggerEnter(Collider collision)
     {
-        if(collision.gameObject.name == "Bean")
+        if (collision.gameObject.name == "Bean")
             inRadius = true;
-            strafingPos1 = false;
-            strafingPos2 = false;
+        strafingPos1 = false;
+        strafingPos2 = false;
 
     }
 
