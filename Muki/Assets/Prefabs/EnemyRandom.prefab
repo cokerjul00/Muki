@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6412591980275937749}
   - component: {fileID: 6412591980275937748}
   - component: {fileID: 6412591980275937771}
+  - component: {fileID: 6831189873515865622}
   m_Layer: 0
   m_Name: EnemyRandom
   m_TagString: Enemy
@@ -166,3 +167,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wanderRadius: 10
   wanderTimer: 1
+--- !u!114 &6831189873515865622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6412591980275937770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149bdb81b8b0edf48b6324f5eb99e93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
