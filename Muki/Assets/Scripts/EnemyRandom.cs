@@ -35,7 +35,7 @@ public class EnemyRandom : MonoBehaviour
             Enemy.SetDestination(player.transform.position);
         }
 
-        else if (!inRadius)
+        if (!inRadius)
         {
 
             timer += Time.deltaTime;
@@ -49,6 +49,9 @@ public class EnemyRandom : MonoBehaviour
             }
         }
     }
+
+
+
 
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
     {
