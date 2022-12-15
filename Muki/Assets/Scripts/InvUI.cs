@@ -21,6 +21,7 @@ public class InvUI : MonoBehaviour
    public void UpdateCollectableText(PlayerInv playerInventory)
     {
         CollectableText.text = playerInventory.piecesCollected.ToString();
+
     }
 
 

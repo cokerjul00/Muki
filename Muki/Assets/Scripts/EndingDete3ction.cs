@@ -1,23 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndingDete3ction : MonoBehaviour
 {
-    public InvUI Invui;
-    public Collectable Collect;
+
+    PointHolder point;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Invui = GetComponent<InvUI>();
-        Collect = GetComponent<Collectable>();
+
+        point = GetComponent<PointHolder>();
     }
 
     // Update is called once per frame
     void Update()
     {
-    
+        
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (point.Points == 8)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+     
+    }
+
 }

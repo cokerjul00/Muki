@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerThings : MonoBehaviour
 {
+    public WingGameScript WingGame;
     public GameOverScript GameOver;
     public int health = 3;
     public int Maxhealth = 5;

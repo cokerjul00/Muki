@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-
+    PointHolder Pointss;
+    public GameObject Ending;
+    public void Start()
+    {
+        Pointss = GameObject.Find("Ending").GetComponent<PointHolder>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,8 +19,10 @@ public class Collectable : MonoBehaviour
         {
             playerInventory.PiecesCollected();
             gameObject.SetActive(false);
-
+            Pointss.Points += 1;
         }
     }
+
+
 
 }
