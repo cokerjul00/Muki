@@ -5,7 +5,8 @@ using UnityEngine;
 public class PointHolder : MonoBehaviour
 {
 
-    public float Points = 0f;
+    public int Points = 0;
+    
 
 
     // Start is called before the first frame update

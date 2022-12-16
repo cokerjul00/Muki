@@ -19,7 +19,7 @@ public class Collectable : MonoBehaviour
         {
             playerInventory.PiecesCollected();
             gameObject.SetActive(false);
-            Pointss.Points += 1;
+            Pointss.Points ++;
         }
     }
 

@@ -7,12 +7,13 @@ public class EndingDete3ction : MonoBehaviour
 {
 
     PointHolder point;
-
+    MusicEnder Endsongs;
+    GameObject EndMusicHolder;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Endsongs = GameObject.Find("EndMusicHolder").GetComponent<MusicEnder>();
         point = GetComponent<PointHolder>();
     }
 
@@ -29,6 +30,7 @@ public class EndingDete3ction : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            
         }
 
      

@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class MusicEnder : MonoBehaviour
 {
-    public AudioSource Endsong;
-    bool Song;
+    private AudioSource Endsong;
     PointHolder points1;
-    GameObject ending;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        Endsong = gameObject.GetComponent<AudioSource>();
+        Endsong = GetComponent<AudioSource>();
         points1 = GameObject.Find("Ending").GetComponent<PointHolder>();
 
     }
@@ -20,13 +19,17 @@ public class MusicEnder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (points1.Points == 8)
+        if (points1.Points >= 8)
         {
-            //Plays an Audio Source
-            //audioSource.Play();
+            Endsong.Play();
         }
     }
 
+    public void playEnd()
+    {
+        
+
+    }
 
 
 }

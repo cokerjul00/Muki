@@ -7,6 +7,9 @@ public class PlayerThings : MonoBehaviour
     public GameOverScript GameOver;
     public int health = 3;
     public int Maxhealth = 5;
+    
+    
+
 
     Rigidbody rb;
 
@@ -15,6 +18,7 @@ public class PlayerThings : MonoBehaviour
     {
         health = Maxhealth;
         rb = GetComponent<Rigidbody>();
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -38,5 +42,7 @@ public class PlayerThings : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
+
+
     }
 }

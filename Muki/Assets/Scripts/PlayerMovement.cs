@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         else
             rb.drag = 0;
 
-        if (Input.GetKeyDown(KeyCode.Escape)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
         }
