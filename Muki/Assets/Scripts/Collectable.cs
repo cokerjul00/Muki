@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
     PointHolder Pointss;
-    public GameObject Ending;
+    GameObject Ending;
     public void Start()
     {
         Pointss = GameObject.Find("Ending").GetComponent<PointHolder>();

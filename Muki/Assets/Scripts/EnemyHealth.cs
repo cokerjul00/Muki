@@ -20,6 +20,7 @@ public class EnemyHealth : MonoBehaviour
         if (Enemyhealth <= 0)
         {
             Object.Destroy(Enemy);
+            Debug.Log("Hello");
         }
            
     }
